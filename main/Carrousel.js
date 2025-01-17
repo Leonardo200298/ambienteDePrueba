@@ -40,10 +40,10 @@ class Carrousel {
                 this.posicionDeAvance = 0;
             }
             this.carruselInterno.style.transform = `translateX(-${this.posicionDeAvance}px)`;
-            console.log(this.posicionDeAvance);
+  
             
         }
-        console.log(tamanioCard);
+
         
     }
 }
