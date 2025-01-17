@@ -30,3 +30,11 @@ botonSiguiente.addEventListener("click", () => {
 botonAnterior.addEventListener("click", ()=>{
     carrusel.retrocederCarrusel();
 })
+
+
+/* ---------------------------------------------- */
+
+/* 4 EN LINEA */
+
+let jugadorDePrueba = new Jugador('elcrack','images/leon.jpeg');
+console.log(jugadorDePrueba.reconocerImagenes());
