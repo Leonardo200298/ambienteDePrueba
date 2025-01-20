@@ -31,3 +31,6 @@ section{
 .oculto{
     display: none;
 }
+.seleccionada{
+    border: 4px solid blue;
+}

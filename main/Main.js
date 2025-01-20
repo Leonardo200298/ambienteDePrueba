@@ -49,5 +49,5 @@ jugador1.agregarFicha(fichaParaElegir2)
 jugador1.agregarFicha(fichaParaElegir3)
 jugador1.agregarFicha(fichaParaElegir4)
 
-jugador1.reconocerImagenes()
+
 jugador1.mostrarFichas()

@@ -5,4 +5,7 @@ class CuatroEnLinea {
         this.jugador2 = jugador2;
         this.contexto = document.querySelector("#canvasCuatroEnLinea");
     }
+    recepcionDeFichaDelJugador(){
+        
+    }
 }

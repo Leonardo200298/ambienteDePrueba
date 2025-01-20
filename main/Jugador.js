@@ -1,7 +1,8 @@
 class Jugador {
-    constructor(nombreDeUsuario) {
+    constructor(nombreDeUsuario, miFicha) {
         this.nombreDeUsuario = nombreDeUsuario;
         this.fichaParaSeleccionar = [];
+        this.miFicha = miFicha;
         /* this.imagenes = [] */
     }
 /*      let imagenes = [
@@ -13,21 +14,35 @@ class Jugador {
     agregarFicha(ficha){
         this.fichaParaSeleccionar.push(ficha)
     }
-    mostrarFichas(){
-        this.fichaParaSeleccionar.map((index)=>{
-            document.querySelector("#imagenes").innerHTML +=
-            `  <img src="${index.getImagen()}" alt="">
-              `
-        })
-    }
-    reconocerImagenes(){
-        console.log(this.fichaParaSeleccionar.length);
-        
-        let imagenes = document.querySelectorAll("#imagenes")
-        let arregloDeElementosHTML = imagenes[0].children;
-     
+    mostrarFichas() {
 
-        
+        const contenedor = document.querySelector("#imagenes");
+        contenedor.innerHTML = "";
+
+
+        this.fichaParaSeleccionar.forEach((ficha, index) => {
+            const img = document.createElement("img");
+            img.src = ficha.getImagen();
+            img.alt = `Ficha ${index + 1}`;
+       
+
+
+            img.addEventListener("click", () => {
+                console.log("entre");
+                this.seleccionarFicha(index);
+                
+            });
+
+            contenedor.appendChild(img);
+        });
+    }
+    seleccionarFicha(indice){
+        const imagenes = document.querySelectorAll("#imagenes img");
+        this.miFicha = this.fichaParaSeleccionar[indice];
+       /*  this.fichaParaSeleccionar.splice(indice,1);
+        mostrarFichas() */
+
+        imagenes[indice].classList.add("seleccionada");
         
     }
 }
