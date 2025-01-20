@@ -1,4 +1,4 @@
-let botonSiguiente = document.querySelector("#siguiente");
+/* let botonSiguiente = document.querySelector("#siguiente");
 let botonAnterior = document.querySelector("#anterior");
 let leon = new Card('Leon', 'ferocidad', 'images/leon.jpeg');
 let conejo = new Card('Conejo', 'saltar', 'images/conejo.jpeg');
@@ -30,11 +30,24 @@ botonSiguiente.addEventListener("click", () => {
 botonAnterior.addEventListener("click", ()=>{
     carrusel.retrocederCarrusel();
 })
-
+ */
 
 /* ---------------------------------------------- */
 
 /* 4 EN LINEA */
-
+/* 
 let jugadorDePrueba = new Jugador('elcrack','images/leon.jpeg');
-console.log(jugadorDePrueba.reconocerImagenes());
+console.log(jugadorDePrueba.reconocerImagenes()); */
+let fichaParaElegir1 = new Ficha('images/leon.jpeg') 
+let fichaParaElegir2 = new Ficha('images/lobo.jpeg')
+let fichaParaElegir3 = new Ficha('images/carpincho.jpeg')
+let fichaParaElegir4 = new Ficha('images/tigre.jpeg')
+let jugador1 = new Jugador('Sanguchito');
+
+jugador1.agregarFicha(fichaParaElegir1)
+jugador1.agregarFicha(fichaParaElegir2)
+jugador1.agregarFicha(fichaParaElegir3)
+jugador1.agregarFicha(fichaParaElegir4)
+
+jugador1.reconocerImagenes()
+jugador1.mostrarFichas()
