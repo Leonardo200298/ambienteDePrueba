@@ -17,7 +17,9 @@ class CuatroEnLinea {
     }
     
     mostrarJugadores(){
-
+        this.jugadores.forEach((index)=>{
+            document.querySelector("#jugadores").innerHTML += `${index}`
+        })
     }
 
 }
