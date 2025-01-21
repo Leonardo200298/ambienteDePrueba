@@ -1,11 +1,23 @@
 class CuatroEnLinea {
-    constructor(xEnLineaNum, jugador1, jugador2) {
+    constructor(xEnLineaNum) {
         this.xEnLineaNum = xEnLineaNum;
-        this.jugador1 = jugador1;
-        this.jugador2 = jugador2;
+        this.jugadores = []
+        this.botonAgregarJugador = document.querySelector("#btnAgregarJugador")
         this.contexto = document.querySelector("#canvasCuatroEnLinea");
     }
-    recepcionDeFichaDelJugador(){
-        
+
+    agregarJugador(estaEncondiciones, jugador){
+        if (estaEncondiciones == true) {
+            
+            this.botonAgregarJugador.addEventListener('click',()=>{
+                this.jugadores.push(jugador)
+
+            })
+        }
     }
+    
+    mostrarJugadores(){
+
+    }
+
 }

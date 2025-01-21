@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <h1>Estoy en cuatro en linea</h1>
     <section>
         <canvas id="canvasCuatroEnLinea" width="800" height="450" style="border: solid 2px; margin-left:250px;"></canvas>
         <section class="seleccionDeFicha">
-            <label for="">Nombre jugador 1</label>
-            <input type="text">
-            <label for="">Nombre jugador 2</label>
-            <input type="text">
+            <label for="">agregue usuario</label>
+            <input id="inputUsuario" type="text">
+
             <div id="imagenes">
               
             </div> 
+            <div id="jugadores"></div>
             <button>jugar</button>
+            <button id="btnAgregarJugador">agregar jugador</button>
         </section>
     </section>
     <a href="contexto.html">Ir al contexto</a>

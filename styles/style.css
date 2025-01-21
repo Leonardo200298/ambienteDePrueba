@@ -20,10 +20,10 @@ body{
     transition: transform 0.5s ease; 
 }
 
-section{
+/* section{
     display: flex;
     gap: 10px;
-}
+} */
 .avanceDeCarrusel {
     transform: translate(0px);
     transition: transform 0.5s ease; 
@@ -31,6 +31,13 @@ section{
 .oculto{
     display: none;
 }
-.seleccionada{
-    border: 4px solid blue;
+.ficha {
+
+
+    transition: border 0.3s;
 }
+
+.ficha.seleccionada {
+    border: 5px solid blue;
+}
+

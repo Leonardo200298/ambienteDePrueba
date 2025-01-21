@@ -1,8 +1,10 @@
 class Jugador {
-    constructor(nombreDeUsuario, miFicha) {
-        this.nombreDeUsuario = nombreDeUsuario;
+    constructor(miFicha, turno, elegiFichaYlleneUsuario) {
+        this.nombreDeUsuario =document.querySelector("#inputUsuario").value;
         this.fichaParaSeleccionar = [];
         this.miFicha = miFicha;
+        this.turno = turno;
+        this.elegiFichaYlleneUsuario=elegiFichaYlleneUsuario
         /* this.imagenes = [] */
     }
 /*      let imagenes = [
@@ -14,7 +16,7 @@ class Jugador {
     agregarFicha(ficha){
         this.fichaParaSeleccionar.push(ficha)
     }
-    mostrarFichas() {
+/*     mostrarFichas() {
 
         const contenedor = document.querySelector("#imagenes");
         contenedor.innerHTML = "";
@@ -39,10 +41,50 @@ class Jugador {
     seleccionarFicha(indice){
         const imagenes = document.querySelectorAll("#imagenes img");
         this.miFicha = this.fichaParaSeleccionar[indice];
-       /*  this.fichaParaSeleccionar.splice(indice,1);
-        mostrarFichas() */
+       // this.fichaParaSeleccionar.splice(indice,1);
+       // mostrarFichas() 
 
         imagenes[indice].classList.add("seleccionada");
         
-    }
+    } */
+        mostrarFichas() {
+            const contenedor = document.querySelector("#imagenes");
+            contenedor.innerHTML = "";
+
+            this.fichaParaSeleccionar.forEach((ficha, index) => {
+                const img = document.createElement("img");
+                img.src = ficha.getImagen();
+                img.alt = `Ficha ${index + 1}`;
+                img.classList.add("ficha");
+
+                img.addEventListener("click", () => {
+                    this.seleccionarFicha(index);
+                });
+    
+                contenedor.appendChild(img);
+            });
+        }
+    
+        seleccionarFicha(index) {
+            const imagenes = document.querySelectorAll("#imagenes img");
+            imagenes.forEach(img => img.classList.remove("seleccionada"));
+            imagenes[index].classList.add("seleccionada");
+            this.elegiFichaYlleneUsuario = true
+            console.log();
+            setImagen(imagenes[[index]].src)
+            
+           
+        }
+        enCondicionesParaSerAgregadoAarregloDeJugadores(){
+            return this.elegiFichaYlleneUsuario && this.nombreDeUsuario != ""
+        }
+        setImagen(imagenSrc){
+            this.miFicha = imagenSrc;
+        }
+        getImagenSrc(){
+            this.miFicha;
+        }
+        getNombreUsuario(){
+            this.nombreDeUsuario
+        }
 }
